@@ -1,11 +1,9 @@
 import React from 'react';
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, setDoneStatus }) => {
   return (
-    <li>
-      <h4>ID: {todo.id}</h4>
-      <h4>Title: {todo.title}</h4>
-      <h5>Isdone: {todo.done ? 'Yes' : 'No'}</h5>
+    <li onClick={() => setDoneStatus(todo.id)}>
+      <span className={todo.done ? 'item-done' : ''}>Title: {todo.title}</span>
     </li>
   );
 };
