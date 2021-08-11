@@ -31,9 +31,8 @@ function App() {
   };
 
   const resetAll = () => {
-    const allCountersCopy = [...allCounters];
-    allCountersCopy.map((c) => (c.value = 0));
-    setAllCounters(allCountersCopy);
+    const allCountersReset = allCounters.map((c) => ({ ...c, value: c.special ? 'start over' : 0 }));
+    setAllCounters(allCountersReset);
   };
 
   return (
