@@ -28,8 +28,7 @@ function App() {
   };
 
   const deleteTodo = (id) => {
-    const todosCopy = [...todos];
-    const filtered = todosCopy.filter((t) => t.id !== id);
+    const filtered = todos.filter((t) => t.id !== id);
     setTodos(filtered);
   };
 
